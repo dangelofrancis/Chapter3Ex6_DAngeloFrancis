@@ -17,6 +17,7 @@ then displays the number of cups of each ingredient needed for the specified num
 */
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -27,7 +28,7 @@ int main()
     const double flourPerRecipe = 2.75;
     
     //custom amount of cookies
-    double cookiesWanted;
+    int cookiesWanted;
 
     //user inputs how many cookies they want
     cout << "Enter how many cookies you would like to make: ";
@@ -43,6 +44,7 @@ int main()
     double flourNeeded = flourPerRecipe * ratio;
 
     //cups of ingredients needed for cookies
+    cout << setprecision(3);
     cout << "Here are the ingredients you will need in order to make " << cookiesWanted << " cookies:" << endl;
     cout << "___________________________________________________________________" << endl << endl;
     cout << "- " << sugarNeeded << " cups of sugar" << endl;
